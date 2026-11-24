@@ -5,8 +5,32 @@
   --color-band-elevated: #f59e0b;
   --color-band-high: #f97316;
   --color-band-critical: #ef4444;
+  --color-spike-bg: #f4f7fe;
+  --color-spike-card: #ffffff;
+  --color-spike-primary: #1e88e5;
+  --color-spike-primary-light: #e3f2fd;
+  --color-spike-text: #2b3674;
+  --color-spike-muted: #a3aed0;
+  --color-spike-border: #e0e5f2;
 }
 
 body {
-  @apply bg-slate-950 text-slate-100 antialiased;
+  @apply bg-spike-bg text-spike-text antialiased;
+  font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }

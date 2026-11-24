@@ -86,8 +86,8 @@ export const api = {
 }
 
 export const bandColor: Record<string, string> = {
-  low: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/30',
-  elevated: 'text-amber-400 bg-amber-400/10 border-amber-400/30',
-  high: 'text-orange-400 bg-orange-400/10 border-orange-400/30',
-  critical: 'text-red-400 bg-red-400/10 border-red-400/30',
+  low: 'text-emerald-600 bg-emerald-50 border-emerald-100',
+  elevated: 'text-amber-600 bg-amber-50 border-amber-100',
+  high: 'text-orange-600 bg-orange-50 border-orange-100',
+  critical: 'text-red-600 bg-red-50 border-red-100',
 }
