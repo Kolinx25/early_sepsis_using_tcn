@@ -1,0 +1,113 @@
+# -----------------------------------------------------------------------------
+# Environment / secrets
+# -----------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+*.log
+
+# -----------------------------------------------------------------------------
+# Virtual environments
+# -----------------------------------------------------------------------------
+venv/
+ENV/
+env/
+.venv/
+
+# -----------------------------------------------------------------------------
+# Data (large / regenerable)
+# -----------------------------------------------------------------------------
+data/raw/
+data/interim/
+data/processed/
+data/splits/
+data/simulation/
+
+# Keep directory structure markers if any are added later
+# !data/.gitkeep
+
+# -----------------------------------------------------------------------------
+# Model artifacts (large weights)
+# -----------------------------------------------------------------------------
+artifacts/checkpoints/
+artifacts/model_registry/**/*.pt
+artifacts/model_registry/**/*.pth
+artifacts/model_registry/**/*.ckpt
+artifacts/model_registry/**/*.bin
+artifacts/**/*.safetensors
+
+# Keep small registry metadata
+# (manifests and configs are tracked)
+
+# -----------------------------------------------------------------------------
+# Results (binary predictions are regenerable)
+# -----------------------------------------------------------------------------
+results/metrics/predictions/*.npy
+results/metrics/predictions/*.npz
+results/**/*.h5
+results/**/*.pkl
+results/**/*.pickle
+
+# -----------------------------------------------------------------------------
+# Frontend (Node / build output)
+# -----------------------------------------------------------------------------
+app/frontend/node_modules/
+app/frontend/dist/
+app/frontend/.turbo/
+app/frontend/.vite/
+*.tsbuildinfo
+
+# -----------------------------------------------------------------------------
+# Docker / deployment runtime
+# -----------------------------------------------------------------------------
+*.pid
+postgres_data/
+pgdata/
+
+# -----------------------------------------------------------------------------
+# IDE / OS
+# -----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

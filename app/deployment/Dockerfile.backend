@@ -1,0 +1,28 @@
+# SepsiGuard backend: FastAPI + PyTorch (CPU) + PostgreSQL client
+FROM python:3.12-slim
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libpq5 && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt \
+    --extra-index-url https://download.pytorch.org/whl/cpu \
+ && pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
+
+# application code + artifacts (weights, registry, replay pool, evaluation
+# metrics) are copied so the container is self-contained
+COPY src/ ./src/
+COPY app/backend/ ./app/backend/
+COPY database/ ./database/
+COPY artifacts/ ./artifacts/
+COPY data/simulation/ ./data/simulation/
+COPY results/metrics/ ./results/metrics/
+
+ENV PYTHONPATH=/app \
+    MODEL_REGISTRY_DIR=/app/artifacts/model_registry \
+    REPLAY_POOL=/app/data/simulation/replay_sessions/test_replay_pool.parquet
+
+EXPOSE 8000
+CMD ["uvicorn", "app.backend.main:app", "--host", "0.0.0.0", "--port", "8000"]

@@ -1,0 +1,47 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: sepsiguard
+      POSTGRES_USER: sepsiguard
+      POSTGRES_PASSWORD: sepsiguard_research
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sepsiguard -d sepsiguard"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: app/deployment/Dockerfile.backend
+    environment:
+      DATABASE_URL: postgresql://sepsiguard:sepsiguard_research@postgres:5432/sepsiguard
+      MODEL_REGISTRY_DIR: /app/artifacts/model_registry
+      REPLAY_POOL: /app/data/simulation/replay_sessions/test_replay_pool.parquet
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request as u; u.urlopen('http://localhost:8000/api/system/health')\""]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+
+  frontend:
+    build:
+      context: ./app/frontend
+      dockerfile: ../deployment/Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:

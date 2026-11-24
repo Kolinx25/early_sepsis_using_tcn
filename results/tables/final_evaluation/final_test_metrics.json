@@ -1,0 +1,70 @@
+{
+  "y6": {
+    "auroc": 0.7903,
+    "auprc": 0.0386,
+    "sensitivity": 0.6312,
+    "specificity": 0.8297,
+    "precision": 0.0339,
+    "recall": 0.6312,
+    "f1": 0.0643,
+    "brier": 0.0091,
+    "confusion": {
+      "tn": 88939,
+      "fp": 18254,
+      "fn": 374,
+      "tp": 640
+    },
+    "prevalence": 0.0094,
+    "auroc_ci95_patient_bootstrap": [
+      0.7652759828848404,
+      0.8163751186549155
+    ],
+    "auprc_ci95_patient_bootstrap": [
+      0.034539977318618215,
+      0.04711144258457539
+    ],
+    "net_benefit_at_youden_threshold": 0.00365,
+    "platt": {
+      "a": 0.8335980772972107,
+      "b": -3.990874767303467
+    },
+    "threshold_youden": 0.013248635455965996,
+    "alert_threshold_sensitivity80": 0.0053786588832736015,
+    "median_lead_time_hours_when_alerting": 45.5,
+    "n_septic_test_patients_with_alert": 228
+  },
+  "y12": {
+    "auroc": 0.8021,
+    "auprc": 0.0989,
+    "sensitivity": 0.675,
+    "specificity": 0.8059,
+    "precision": 0.0768,
+    "recall": 0.675,
+    "f1": 0.138,
+    "brier": 0.0218,
+    "confusion": {
+      "tn": 85170,
+      "fp": 20508,
+      "fn": 822,
+      "tp": 1707
+    },
+    "prevalence": 0.0234,
+    "auroc_ci95_patient_bootstrap": [
+      0.7790614926250137,
+      0.8231295684395205
+    ],
+    "auprc_ci95_patient_bootstrap": [
+      0.08746964546170621,
+      0.11919400362363436
+    ],
+    "net_benefit_at_youden_threshold": 0.01074,
+    "platt": {
+      "a": 0.6959941387176514,
+      "b": -3.232131242752075
+    },
+    "threshold_youden": 0.025888269767165184,
+    "alert_threshold_sensitivity80": 0.013445802964270115,
+    "median_lead_time_hours_when_alerting": 48.0,
+    "n_septic_test_patients_with_alert": 228
+  }
+}

@@ -1,0 +1,19 @@
+numpy>=2.0
+pandas>=2.2
+scipy>=1.14
+matplotlib>=3.9
+seaborn>=0.13
+scikit-learn>=1.6
+xgboost>=2.1
+torch>=2.4      # CPU build sufficient: pip install torch --index-url https://download.pytorch.org/whl/cpu
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+psycopg2-binary>=2.9
+websockets>=12
+python-dotenv>=1.0
+pytest>=8
+nbformat>=5.10
+pyarrow>=16.1
+
+# Frontend (app/frontend) uses npm; see app/frontend/package.json

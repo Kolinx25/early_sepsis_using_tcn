@@ -1,0 +1,9 @@
+channel,median_hours_between_observations,p90_hours_between_observations
+HR,1.0,1.0
+SBP,1.0,1.0
+Temp,2.0,5.0
+O2Sat,1.0,1.0
+Lactate,2.0,12.0
+BUN,10.0,24.0
+WBC,10.0,25.0
+Glucose,3.0,10.0

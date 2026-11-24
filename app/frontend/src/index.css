@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-band-low: #10b981;
+  --color-band-elevated: #f59e0b;
+  --color-band-high: #f97316;
+  --color-band-critical: #ef4444;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+}
