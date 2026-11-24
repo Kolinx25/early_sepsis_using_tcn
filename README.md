@@ -137,6 +137,10 @@ A full comparison against baselines (logistic regression, random forest, XGBoost
 
 For exact commands and hyperparameters, see the source files in `src/` and the progress log in `PROGRESS.md`.
 
+The full academic-style study protocol, including cohort eligibility,
+outcome definitions, preprocessing, model training, calibration, and
+evaluation, is documented in [Methodology](docs/methodology.md).
+
 ---
 
 ## Tech stack
