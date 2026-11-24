@@ -52,7 +52,7 @@ docker compose up --build
 
 Then open:
 
-- Web dashboard: http://localhost:5173
+- Web dashboard: http://localhost:3000
 - API docs: http://localhost:8000/docs
 - WebSocket stream: ws://localhost:8000/ws/stream
 
