@@ -76,9 +76,9 @@ pytest
 ├── src/                    # Research pipeline
 │   ├── data/               # Loading and exploratory analysis
 │   ├── features/           # Windowing, labels, missingness features
-│   ├── models/             # TCN, gating branch, inference code
-│   ├── training/           # Baselines, contrastive pretraining, full training
-│   └── evaluation/         # Metrics, calibration, bootstrap CIs
+│   ├── models/              # TCN, gating branch, inference code
+│   ├── training/            # Baselines, contrastive pretraining, full training
+│   └── evaluation/          # Metrics, calibration, bootstrap CIs
 ├── tests/                  # pytest suite including end-to-end acceptance test
 ├── artifacts/              # Small, versioned artifacts (scaler, manifest)
 ├── database/               # PostgreSQL schema
@@ -159,4 +159,6 @@ If you use this work, please cite the dataset:
 
 ## License
 
-The code in this repository is provided for research and educational purposes. The dataset itself is governed by the PhysioNet data-use agreement.
+The code in this repository is licensed under the [MIT License](LICENSE), which permits use, modification, and redistribution, including for commercial purposes, subject to the license terms.
+
+The PhysioNet dataset is not covered by this license. Its use remains subject to the PhysioNet data-use agreement.
